@@ -37,6 +37,9 @@ from hordak.defaults import MAX_DIGITS, DECIMAL_PLACES
 
 from hordak.utilities.currency import Balance
 
+import moneyed
+
+moneyed.add_currency("SHIB", "000", "Shiba Token", None)
 
 #: Debit
 DEBIT = "debit"
