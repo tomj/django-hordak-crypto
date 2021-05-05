@@ -26,6 +26,10 @@ class AccountListView(LoginRequiredMixin, ListView):
     template_name = "hordak/accounts/account_list.html"
     context_object_name = "accounts"
 
+    def get_context_data(self, **kwargs):
+        data = {"accounts": Account.objects.all().prefetch_related("legs")}
+        return data
+
 
 class AccountCreateView(LoginRequiredMixin, CreateView):
     """View for creating accounts

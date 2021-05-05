@@ -9,9 +9,9 @@ from hordak.models import Account, Transaction, Leg
 from moneyed import Money
 from mptt.forms import TreeNodeChoiceField
 
-import moneyed
+from hordak import defaults
 
-moneyed.add_currency("SHIB", "000", "Shiba Token", None)
+defaults.Setup.add_custom_currencies()
 
 
 class SimpleTransactionForm(forms.ModelForm):
@@ -31,7 +31,10 @@ class SimpleTransactionForm(forms.ModelForm):
     to_account = TreeNodeChoiceField(
         queryset=Account.objects.all(), to_field_name="uuid"
     )
-    amount = MoneyField(max_digits=MAX_DIGITS, decimal_places=DECIMAL_PLACES)
+    amount = MoneyField(
+        max_digits=MAX_DIGITS,
+        decimal_places=DECIMAL_PLACES,
+    )
 
     class Meta:
         model = Transaction
@@ -114,7 +117,9 @@ class LegForm(forms.ModelForm):
     account = TreeNodeChoiceField(Account.objects.all(), to_field_name="uuid")
     description = forms.CharField(required=False)
     amount = MoneyField(
-        required=True, max_digits=MAX_DIGITS, decimal_places=DECIMAL_PLACES
+        required=True,
+        max_digits=MAX_DIGITS,
+        decimal_places=DECIMAL_PLACES,
     )
 
     class Meta:

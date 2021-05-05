@@ -37,9 +37,7 @@ from hordak.defaults import MAX_DIGITS, DECIMAL_PLACES
 
 from hordak.utilities.currency import Balance
 
-import moneyed
-
-moneyed.add_currency("SHIB", "000", "Shiba Token", None)
+defaults.Setup.add_custom_currencies()
 
 #: Debit
 DEBIT = "debit"
@@ -479,6 +477,7 @@ class Leg(models.Model):
         help_text="Record debits as positive, credits as negative",
         default_currency=defaults.INTERNAL_CURRENCY,
         verbose_name=_("amount"),
+        currency_max_length=20,
     )
     description = models.TextField(
         default="", blank=True, verbose_name=_("description")
