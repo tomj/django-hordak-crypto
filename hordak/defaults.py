@@ -8,9 +8,9 @@ DEFAULT_CURRENCY = getattr(settings, "DEFAULT_CURRENCY", "EUR")
 
 CURRENCIES = getattr(settings, "CURRENCIES", ["SHIB", "ETH"])
 
-DECIMAL_PLACES = getattr(settings, "HORDAK_DECIMAL_PLACES", 2)
+DECIMAL_PLACES = getattr(settings, "HORDAK_DECIMAL_PLACES", 15)
 
-MAX_DIGITS = getattr(settings, "HORDAK_MAX_DIGITS", 13)
+MAX_DIGITS = getattr(settings, "HORDAK_MAX_DIGITS", 30)
 
 
 # TODO: make this pull from a DB or something similar, it must be dynamic
