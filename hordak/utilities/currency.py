@@ -56,6 +56,7 @@ from django.core.cache import cache
 from django.db import transaction as db_transaction
 from django.utils.translation import get_language
 from django.utils.translation import to_locale
+from django.utils import timezone
 from moneyed import Money
 from moneyed.localization import format_money
 
@@ -187,7 +188,7 @@ def currency_exchange(
     # Checks over and done now. Let's create the transaction
     with db_transaction.atomic():
         transaction = Transaction.objects.create(
-            date=date or datetime.date.today(),
+            date=date or timezone.now,
             description=description
             or "Exchange of {} to {}, incurring {} fees".format(
                 source_amount,
