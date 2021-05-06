@@ -397,7 +397,7 @@ class Transaction(models.Model):
         help_text="The creation date of this transaction object",
         verbose_name=_("timestamp"),
     )
-    date = models.DateField(
+    date = models.DateTimeField(
         default=timezone.now,
         help_text="The date on which this transaction occurred",
         verbose_name=_("date"),
