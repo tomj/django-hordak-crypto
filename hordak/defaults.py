@@ -13,6 +13,7 @@ DECIMAL_PLACES = getattr(settings, "HORDAK_DECIMAL_PLACES", 2)
 MAX_DIGITS = getattr(settings, "HORDAK_MAX_DIGITS", 13)
 
 
+# TODO: make this pull from a DB or something similar, it must be dynamic
 class Setup:
     @staticmethod
     def add_custom_currencies():
@@ -25,3 +26,4 @@ class Setup:
         moneyed.add_currency("COMP", "000", "Compound", None)
         moneyed.add_currency("MATIC", "000", "Polygon", None)
         moneyed.add_currency("BTC", "000", "Bitcoin", None)
+        moneyed.add_currency("KRILL", "000", "Polywhale", None)
