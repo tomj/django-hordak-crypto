@@ -37,6 +37,7 @@ from hordak.defaults import MAX_DIGITS, DECIMAL_PLACES
 
 from hordak.utilities.currency import Balance
 
+defaults.Setup.add_custom_currencies()
 
 #: Debit
 DEBIT = "debit"
@@ -396,7 +397,7 @@ class Transaction(models.Model):
         help_text="The creation date of this transaction object",
         verbose_name=_("timestamp"),
     )
-    date = models.DateField(
+    date = models.DateTimeField(
         default=timezone.now,
         help_text="The date on which this transaction occurred",
         verbose_name=_("date"),
@@ -476,6 +477,7 @@ class Leg(models.Model):
         help_text="Record debits as positive, credits as negative",
         default_currency=defaults.INTERNAL_CURRENCY,
         verbose_name=_("amount"),
+        currency_max_length=20,
     )
     description = models.TextField(
         default="", blank=True, verbose_name=_("description")
