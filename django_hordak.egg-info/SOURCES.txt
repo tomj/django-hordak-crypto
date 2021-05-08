@@ -100,6 +100,13 @@ hordak/migrations/0043_auto_20210504_0226.py
 hordak/migrations/0044_auto_20210504_0228.py
 hordak/migrations/0045_auto_20210504_0329.py
 hordak/migrations/0046_auto_20210505_1245.py
+hordak/migrations/0047_auto_20210506_1254.py
+hordak/migrations/0048_auto_20210506_1321.py
+hordak/migrations/0049_auto_20210506_1322.py
+hordak/migrations/0050_auto_20210506_1329.py
+hordak/migrations/0051_auto_20210506_1614.py
+hordak/migrations/0052_auto_20210508_0830.py
+hordak/migrations/0053_auto_20210508_0934.py
 hordak/migrations/__init__.py
 hordak/models/__init__.py
 hordak/models/core.py
