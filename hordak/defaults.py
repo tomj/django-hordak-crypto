@@ -12,6 +12,8 @@ DECIMAL_PLACES = getattr(settings, "HORDAK_DECIMAL_PLACES", 15)
 
 MAX_DIGITS = getattr(settings, "HORDAK_MAX_DIGITS", 30)
 
+CURRENCY_CODE_MAX_LENGTH = 20
+
 
 # TODO: make this pull from a DB or something similar, it must be dynamic
 class Setup:
