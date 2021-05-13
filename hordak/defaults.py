@@ -23,6 +23,7 @@ class Setup:
         moneyed.add_currency("BTC", "000", "Bitcoin", None)
         moneyed.add_currency("COMP", "000", "Compound", None)
         moneyed.add_currency("DAI", "000", "Dai", None)
+        moneyed.add_currency("DEFI5", "000", "defi5", None)
         moneyed.add_currency("ETH", "000", "Ethereum", None)
         moneyed.add_currency("KRILL", "000", "Krill", None)
         moneyed.add_currency("LEASH", "000", "Leash", None)
