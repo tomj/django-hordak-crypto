@@ -30,4 +30,5 @@ class Setup:
         moneyed.add_currency("MATIC", "000", "Polygon", None)
         moneyed.add_currency("NANO", "000", "Nano", None)
         moneyed.add_currency("SHIB", "000", "Shiba Token", None)
+        moneyed.add_currency("TRX", "000", "TRON", None)
         moneyed.add_currency("USDT", "000", "Tether", None)
