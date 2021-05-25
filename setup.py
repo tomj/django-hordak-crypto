@@ -25,7 +25,7 @@ setup(
         "django-smalluuid>=1.1.1",
         "requests>=2",
         "py-moneyed>=0.6.0",
-        "django-money>=0.9.1",
+        "django-money==1.3.1",
         "django-import-export>=0.5.0",
         "babel==2.5.1",
         'openpyxl<=2.6;python_version<"3.5"',
