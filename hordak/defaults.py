@@ -21,6 +21,7 @@ class Setup:
     def add_custom_currencies():
         moneyed.add_currency("ADA", "000", "Cardano", None)
         moneyed.add_currency("BTC", "000", "Bitcoin", None)
+        moneyed.add_currency("BYN", "000", "Beyond Finance", None)
         moneyed.add_currency("COMP", "000", "Compound", None)
         moneyed.add_currency("DAI", "000", "Dai", None)
         moneyed.add_currency("DEFI5", "000", "defi5", None)
